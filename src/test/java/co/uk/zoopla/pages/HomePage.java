@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver)
@@ -18,13 +20,21 @@ public class HomePage extends BasePage {
     private WebElement locationField;
     @FindBy(id = "forsale_price_min")
     private WebElement minPrice;
-    @FindBy(id = "search-submit")
+    @FindBy(css = ".button.button--primary")
     private WebElement searchButton;
+    @FindBy(className = "ui-menu-item")
+    private List<WebElement> autoComplte;
 
+
+    private void  clickOnAutoCompleteOption()
+    {
+        autoComplte.get(0).click();
+    }
     public void enterLocation(String location)
     {
         locationField.clear();
         locationField.sendKeys(location);
+        clickOnAutoCompleteOption();
     }
 
     public void selectMinimumPrice(String miniPrice)
