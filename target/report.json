@@ -1,0 +1,182 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-02-08T11:06:10.963Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9756077720,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setUp()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Customer can search for any property",
+        "description": "",
+        "id": "search-for-sale-properties;customer-can-search-for-any-property;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 832931682,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1685559219,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I navigate to zoopla homepage",
+            "match": {
+              "location": "ForSaleSearchSteps.i_navigate_to_zoopla_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1115406970,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I enter a \"Manchester\" in the search text box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Manchester\"",
+                  "offset": 10
+                }
+              ],
+              "location": "ForSaleSearchSteps.i_enter_a_in_the_search_text_box(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 334951814,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I select \"£120,000\" from Min price dropdown",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"£120,000\"",
+                  "offset": 9
+                }
+              ],
+              "location": "ForSaleSearchSteps.i_select_from_Min_price_dropdown(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 129811,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I select \"£230,000\" from Max price dropdown",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"£230,000\"",
+                  "offset": 9
+                }
+              ],
+              "location": "ForSaleSearchSteps.i_select_from_Max_price_dropdown(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 79661,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I select \"Houses\" from Property type dropdown",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Houses\"",
+                  "offset": 9
+                }
+              ],
+              "location": "ForSaleSearchSteps.i_select_from_Property_type_dropdown(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 95017,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I select \"3+\" from Bedrooms dropdown",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3+\"",
+                  "offset": 9
+                }
+              ],
+              "location": "ForSaleSearchSteps.i_select_from_Bedrooms_dropdown(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1525171315,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click on Search button",
+            "match": {
+              "location": "ForSaleSearchSteps.i_click_on_Search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 343590698,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "a list of \"Houses\" in \"Manchester\" are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Houses\"",
+                  "offset": 10
+                },
+                {
+                  "val": "\"Manchester\"",
+                  "offset": 22
+                }
+              ],
+              "location": "ForSaleSearchSteps.a_list_of_in_are_displayed(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Search For Sale Properties",
+    "description": "  As a customer\n  I want the ability to search for properties for sale\n  So that I can know more about the property before I buy",
+    "id": "search-for-sale-properties",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/co/uk/zoopla/features/CustomerCanSearchForSaleProperties.feature",
+    "tags": []
+  }
+]
