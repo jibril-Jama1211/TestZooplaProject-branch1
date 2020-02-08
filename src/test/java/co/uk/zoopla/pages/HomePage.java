@@ -24,22 +24,41 @@ public class HomePage extends BasePage {
     private WebElement searchButton;
     @FindBy(className = "ui-menu-item")
     private List<WebElement> autoComplte;
+    @FindBy (id = "search-tabs-house-prices" )
+    private WebElement housePrices;
+    @FindBy (id = "search-tabs-for-sale")
+    private WebElement forSaleTab;
 
+    private void clickOnHousePricesTab ()
+    {
 
+        housePrices.click();
+    }
+
+    private void clickOnForSaleTab ()
+    {
+
+        forSaleTab.click();
+    }
     private void  clickOnAutoCompleteOption()
     {
-        autoComplte.get(0).click();
+
+        javaScriptClick(autoComplte.get(0));
+        //autoComplte.get(0).click();
     }
     public void enterLocation(String location)
     {
         locationField.clear();
         locationField.sendKeys(location);
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        clickOnAutoCompleteOption();
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        clickOnAutoCompleteOption();
+
+        clickOnHousePricesTab();
+        clickOnForSaleTab();
     }
 
     public void selectMinimumPrice(String miniPrice)

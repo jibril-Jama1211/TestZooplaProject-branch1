@@ -1,6 +1,7 @@
 package co.uk.zoopla.pages;
 
 import co.uk.zoopla.common.Driver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -32,4 +33,9 @@ public class BasePage extends Driver
         select.selectByIndex(index);
     }
 
+    public void javaScriptClick(WebElement element)
+    {
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click()", element);
+    }
 }
