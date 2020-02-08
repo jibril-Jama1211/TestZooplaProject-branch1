@@ -34,6 +34,11 @@ public class HomePage extends BasePage {
     {
         locationField.clear();
         locationField.sendKeys(location);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         clickOnAutoCompleteOption();
     }
 
