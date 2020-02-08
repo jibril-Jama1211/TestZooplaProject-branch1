@@ -58,7 +58,14 @@ public class HomePage extends BasePage {
 //        clickOnAutoCompleteOption();
 
         clickOnHousePricesTab();
+
         clickOnForSaleTab();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void selectMinimumPrice(String miniPrice)
